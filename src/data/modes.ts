@@ -153,7 +153,7 @@ export function gibsUrl(layer: GibsLayer, date: string) {
 
 export function getSeries(mode: ModeId): SeriesPoint[] {
   const m = MODES[mode];
-  return m.dates.map((d, i) => ({ date: d.slice(0, 4), value: m.series.values[i] }));
+  return m.dates.map((d, i) => ({ date: d.slice(0, 4), value: m.series.values[i] ?? 0 }));
 }
 
 export const RANGPUR_CENTER: [number, number] = [25.7439, 89.2752];
