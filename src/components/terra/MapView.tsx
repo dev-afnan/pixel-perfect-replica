@@ -28,17 +28,14 @@ export function MapView({ mode, date, compareDate, opacity }: Props) {
       L.current = leaflet;
       const m = leaflet.map(el.current, { center: RANGPUR_CENTER, zoom: 9, minZoom: 5, maxZoom: 12, zoomControl: true });
       leaflet
-        .tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-          subdomains: "abcd",
+        .tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          className: "tp-base",
         })
         .addTo(m);
       m.createPane("leftPane").style.zIndex = "350";
       m.createPane("labels").style.zIndex = "450";
       m.getPane("labels")!.style.pointerEvents = "none";
-      leaflet
-        .tileLayer("https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png", { pane: "labels", subdomains: "abcd" })
-        .addTo(m);
       leaflet
         .polygon(RANGPUR_OUTLINE, { color: "#5fd4f0", weight: 1.5, dashArray: "4 4", fill: false })
         .bindTooltip("Rangpur District (approximate outline)", { className: "tp-label", sticky: true })
@@ -123,7 +120,7 @@ export function MapView({ mode, date, compareDate, opacity }: Props) {
             type="range" min={5} max={95} value={split * 100}
             onChange={(e) => setSplit(Number(e.target.value) / 100)}
             aria-label="Swipe comparison divider"
-            className="absolute bottom-10 left-1/2 z-[500] w-2/3 -translate-x-1/2 accent-primary"
+            className="absolute top-12 left-1/2 z-[500] w-1/2 -translate-x-1/2 accent-primary"
           />
         </>
       )}

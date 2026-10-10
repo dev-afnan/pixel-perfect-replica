@@ -166,7 +166,7 @@ function Index() {
             <a href="#video" className="text-muted-foreground hover:text-foreground">Project Video</a>
           </div>
           <div className="text-xs text-muted-foreground">
-            <p>Imagery: NASA EOSDIS GIBS, MODIS (LP DAAC, LANCE). Base map © OpenStreetMap contributors, © CARTO.</p>
+            <p>Imagery: NASA EOSDIS GIBS, MODIS (LP DAAC, LANCE). Base map © OpenStreetMap contributors, (base map).</p>
             <p className="mt-3">Independent student project. Not an official NASA product and not endorsed by NASA.</p>
           </div>
         </div>

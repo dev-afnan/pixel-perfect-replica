@@ -110,3 +110,4 @@
   transition: background 150ms;
   &:hover { background: var(--color-secondary); }
 }
+.tp-base { filter: invert(1) hue-rotate(190deg) brightness(0.85) saturate(0.5); }
