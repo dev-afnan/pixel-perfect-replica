@@ -40,7 +40,8 @@ export function Explorer() {
   const play = () => { if (idx >= n - 1) setIdx(0); setCompare(false); setPlaying(!playing); };
   const reset = () => { setPlaying(false); setIdx(n - 1); setCmpIdx(0); setCompare(false); setOpacity(0.85); };
 
-  const a = series[cmpIdx], b = series[idx];
+  const fb = { date: "", value: 0 };
+  const a = series[cmpIdx] ?? fb, b = series[idx] ?? fb;
   const diff = b.value - a.value;
   const fmt = (v: number) => (cfg.series.unit === "NDVI" ? v.toFixed(2) : v.toFixed(1));
   const vals = series.map((s) => s.value);
@@ -80,7 +81,7 @@ export function Explorer() {
           <div className="relative h-[420px] sm:h-[520px]">
             {hydrated ? (
               <Suspense fallback={<div className="grid h-full place-items-center text-sm text-muted-foreground">Loading map…</div>}>
-                <MapView mode={mode} date={cfg.dates[idx]} compareDate={compare ? cfg.dates[cmpIdx] : null} opacity={opacity} />
+                <MapView mode={mode} date={cfg.dates[idx] ?? ""} compareDate={compare ? (cfg.dates[cmpIdx] ?? null) : null} opacity={opacity} />
               </Suspense>
             ) : <div className="grid h-full place-items-center text-sm text-muted-foreground">Loading map…</div>}
             {/* Legend */}
