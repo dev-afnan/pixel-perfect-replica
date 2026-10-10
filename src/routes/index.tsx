@@ -8,9 +8,9 @@ import { MODES, MODE_ORDER } from "@/data/modes";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TerraPulse — Rangpur Earth Explorer" },
+      { title: "GeoMorph — Rangpur Earth Explorer" },
       { name: "description", content: "Explore temperature, land and water change in Rangpur, Bangladesh with NASA satellite imagery. NASA Space Apps 2026 — Dancing with the SARs." },
-      { property: "og:title", content: "TerraPulse — Rangpur Earth Explorer" },
+      { property: "og:title", content: "GeoMorph — Rangpur Earth Explorer" },
       { property: "og:description", content: "Interactive satellite Earth-observation explorer for Rangpur, Bangladesh." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -39,7 +39,7 @@ function Index() {
           <a href="#overview" className="flex min-w-0 items-center gap-3">
             <Logo />
             <span className="min-w-0 leading-tight">
-              <span className="block font-semibold tracking-tight">TerraPulse</span>
+              <span className="block font-semibold tracking-tight">GeoMorph</span>
               <span className="block truncate text-xs text-muted-foreground">Rangpur Earth Explorer</span>
             </span>
           </a>
@@ -85,7 +85,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">Our Mission</p>
           <h2 className="mt-2 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">Making satellite Earth observation understandable</h2>
-          <p className="mt-4 max-w-3xl text-muted-foreground">Rangpur sits on the Teesta floodplain in northern Bangladesh, where heat stress, shifting agriculture and monsoon floods shape daily life. TerraPulse turns satellite records into a simple time-based story anyone can explore — and is built to grow into NISAR radar observations.</p>
+          <p className="mt-4 max-w-3xl text-muted-foreground">Rangpur sits on the Teesta floodplain in northern Bangladesh, where heat stress, shifting agriculture and monsoon floods shape daily life. GeoMorph turns satellite records into a simple time-based story anyone can explore — and is built to grow into NISAR radar observations.</p>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {[
               [Radar, "Why SAR", "Synthetic Aperture Radar works day and night and through clouds — vital during the monsoon. NISAR's L- and S-band radar will map surface change and flooding at high resolution. SAR does not measure temperature."],
@@ -130,7 +130,7 @@ function Index() {
       {/* Video */}
       <section id="video" className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
         <div className="text-center">
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">See TerraPulse in Action</h2>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">See GeoMorph in Action</h2>
           <p className="mt-3 text-muted-foreground">Watch our four-minute project presentation for NASA Space Apps Challenge 2026.</p>
         </div>
         <div className="mt-8 panel glow overflow-hidden p-2">
@@ -157,7 +157,7 @@ function Index() {
       <footer className="border-t bg-surface">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 text-sm sm:px-6 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-3"><Logo /><span className="font-semibold">TerraPulse — Rangpur Earth Explorer</span></div>
+            <div className="flex items-center gap-3"><Logo /><span className="font-semibold">GeoMorph — Rangpur Earth Explorer</span></div>
             <p className="mt-3 text-muted-foreground">Built for NASA Space Apps Challenge 2026.<br />Challenge: “Dancing with the SARs.”<br />Study area: Rangpur, Bangladesh.</p>
           </div>
           <div className="flex flex-col gap-2">
