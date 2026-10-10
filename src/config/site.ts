@@ -1,5 +1,5 @@
 /**
- * TerraPulse site configuration.
+ * GeoMorph site configuration.
  *
  * PROJECT VIDEO: paste your 4-minute presentation link into PROJECT_VIDEO_URL.
  * Supported: YouTube (watch / youtu.be / shorts / embed links), Vimeo, or a direct .mp4 URL.
@@ -7,7 +7,7 @@
  */
 export const PROJECT_VIDEO_URL = "";
 
-export const PROJECT_VIDEO_TITLE = "TerraPulse — Dancing with the SARs";
+export const PROJECT_VIDEO_TITLE = "GeoMorph — Dancing with the SARs";
 export const PROJECT_VIDEO_DESCRIPTION =
   "Our NASA Space Apps Challenge 2026 presentation: exploring how Rangpur, Bangladesh changes over time with satellite Earth observation.";
 
