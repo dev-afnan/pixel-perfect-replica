@@ -103,3 +103,10 @@
 .leaflet-control-attribution a { color: var(--primary) !important; }
 .leaflet-bar a { background: var(--card) !important; color: var(--foreground) !important; border-color: var(--border) !important; }
 .leaflet-tooltip.tp-label { background: var(--card); color: var(--foreground); border: 1px solid var(--border); box-shadow: none; font-size: 11px; }
+
+@utility tbtn {
+  display: inline-grid; place-items: center; height: 2.25rem; width: 2.25rem;
+  border-radius: var(--radius-md); border: 1px solid var(--color-border);
+  transition: background 150ms;
+  &:hover { background: var(--color-secondary); }
+}
